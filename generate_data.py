@@ -5,10 +5,10 @@ np.random.seed(42)
 def generate_data(n_models, n_samples, n_features, epsilon_var, x_vars, beta_vars = 1):
     assert len(x_vars) == n_features
     X = np.random.randn(n_models, n_samples, n_features) * np.sqrt(x_vars)
-    epsilon = np.random.randn(n_models, n_samples) * np.sqrt(epsilon_var)
+    # epsilon = np.random.randn(n_models, n_samples) * np.sqrt(epsilon_var)
 
     beta = np.random.randn(n_models, n_features) * np.sqrt(beta_vars)
-    y = np.einsum('ijk,ik->ij', X, beta) + epsilon
+    y = np.einsum('ijk,ik->ij', X, beta) # + epsilon
     return X, y, beta
 
 def generate_isotropic_data():
