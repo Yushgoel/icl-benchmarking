@@ -1,6 +1,7 @@
-# ICL Benchmarking
+# In-Context Learning in Linear vs. Quadratic Attention Models: An Empirical Study on Regression Tasks
 
-Benchmarking the performance of different transformer architectures (quadratic vs linear attention) on in-context learning tasks.
+## Abstract
+Recent work has demonstrated that transformers and linear attention models can perform in-context learning (ICL) on simple function classes, such as linear regression. In this paper, we empirically study how these two attention mechanisms differ in their ICL behavior on the canonical linear-regression task of Garg et al. [3]. We evaluate learning quality (MSE), convergence, and generalization behavior of each architecture. We also analyze how increasing model depth affects ICL performance. Our results illustrate both the similarities and limitations of linear attention relative to quadratic attention in this setting.
 
 ## Project Structure
 
@@ -27,7 +28,6 @@ icl-benchmarking/
 ├── data/                  # Data directory
 │   ├── isotropic_data.npz
 │   └── anisotropic_data.npz
-└── results/               # Experiment results (generated)
 ```
 
 ## Setup
